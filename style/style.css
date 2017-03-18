@@ -1,0 +1,208 @@
+/* Navbar*/
+#top-navbar {
+	height: 1.4rem !important;
+}
+
+#top-navbar .navbar-nav .nav-link {
+	padding: 0rem !important;
+	margin: 0rem !important;
+	margin-top: 0.1rem !important;
+}
+
+#top-navbar .navbar-nav .nav-link:hover {
+	font-weight: bold;
+} 
+
+#top-navbar .navbar-nav .nav-item + .nav-item {
+  margin-left: 0.25rem;  
+}
+
+em.gray {
+	border-right: solid 1px;
+}
+
+.signout:hover {
+	font-weight: bold;
+}
+
+.nav-pills {
+	background: #373A3C;
+}
+
+.nav-pills a {
+	color: #CDCDCE !important;
+}
+
+nav.nav.nav-pills {
+	border-radius: 5px;
+}
+
+/*General*/
+html {
+  font-size: 10px;
+  font-family: sans-serif;
+}
+
+footer {
+	color: #373A3C;
+	text-align: center;
+	z-index: 10;
+	margin-top: 50px;
+}
+
+textarea{
+	width: 100% !important;
+	height: 7rem !important;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul li.member {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+.middleContent {
+	margin-top: 10px;
+}
+
+.red{
+	color: #E21937 !important;
+}
+
+.green{
+	color: #96E264 !important;
+}
+
+.blue{
+	color: #3CB9EC !important;
+}
+
+.gray {
+	color: #555555 !important;
+}
+
+.black {
+	color: #373A3C !important;
+}
+
+.app {
+	background: #F1F1F1 !important;
+}
+
+.text-bold {
+	font-weight: bold !important;
+}
+
+/*Advertisement*/
+.advertisement {
+  background: #fcf9f9;
+  box-shadow: 0 0 0 5px rgba(0,0,0,0.03);
+  padding: 10px;
+}
+
+.advertisements {
+	margin-top: 10px;
+}
+
+.edit-image {
+	border: 1px solid #CDCDCE;
+  margin-bottom: 10px;
+}
+
+.search-ad-title {
+  /* word-break: break-all; */
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333 !important;
+  text-decoration: none;
+}
+
+.search-ad-price {
+	font-weight: bold;
+  color: #428bca;
+}
+
+.ad-images {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.right-text {
+	text-align: right;
+	color: #555555;
+	font-weight: bold;
+}
+
+.left-text {
+	text-align: left;
+	color: #555555;
+	font-weight: bold;	
+}
+
+.ad-change-btn {
+	margin-bottom: 10px;
+}
+
+.btn-danger {
+	color: white !important;
+}
+/*Sidebar*/
+.nav-stacked {
+	background-color: #FCF9F9;
+	color: #333333;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+.nav-stacked a.nav-link:hover {
+	background-color: #0275D8;
+}
+
+.search {
+	margin-bottom: 20px;
+}
+
+.search input {
+	width: 70% !important;
+}
+
+.search button {
+	margin-left: 10px; 
+}
+
+.featured-title {
+  text-align: center;	
+}
+
+.featured-title a {
+	font-size: 10px;
+  font-weight: bold;
+  color: #333333 !important;
+  text-decoration: none;
+}
+
+.featured-price {
+	font-weight: bold;
+	font-size: 14px;
+  color: #428bca;
+  text-align: center;
+}
+
+.featured-ad {
+	margin-top: 20px;	
+}
+
+.featured-image {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 100px;
+}
