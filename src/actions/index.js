@@ -8,11 +8,11 @@ import {
 } from './types'
 
 // const ROOT_URL = 'https://advertisementsserver.herokuapp.com'
-const ROOT_URL ='http://localhost:3000/'
+const ROOT_URL ='http://192.168.0.141:5000'
 
 export function signupUser(values) {
 	return dispatch => {
-		axios.post(`${ROOT_URL}/api/v1/users/signup`, values)
+		axios.post(`${ROOT_URL}/`, values)
 			.then(response => {
 				dispatch({
 					type: AUTH_USER,
@@ -31,17 +31,11 @@ export function signupUser(values) {
   }
 }
 
-export function signinUser({email, password}) {
+export function signinUser() {
 	return dispatch => {
-		axios.post(`${ROOT_URL}/api/v1/users/signin`, {email, password})
+		axios.get(`${ROOT_URL}/api/3/action/user_show?id=tino097`, {headers: {'Authorization':'2d157972-2d68-49b6-accd-b1b5e3f48046'}})
 			.then(response => {
-				dispatch({
-					type: AUTH_USER,
-					payload: response.data
-				})
-				localStorage.setItem('auth_token', response.data.auth_token)
-				localStorage.setItem('user', JSON.stringify(response.data.user))
-				browserHistory.push('/')
+				console.log(response.data);
 			})
 			.catch(error => {
 				dispatch({
