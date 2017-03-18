@@ -33,7 +33,7 @@ export function signupUser(values) {
 
 export function signinUser() {
 	return dispatch => {
-		axios.get(`${ROOT_URL}/api/3/action/user_show?id=tino097`, {headers: {'Authorization':'2d157972-2d68-49b6-accd-b1b5e3f48046'}})
+		axios.get(`${ROOT_URL}/api/3/action/user_show?id=tino097`, { headers: {'Authorization':'2d157972-2d68-49b6-accd-b1b5e3f48046'}})
 			.then(response => {
 				dispatch({
 					type: AUTH_USER,
@@ -50,6 +50,18 @@ export function signinUser() {
 					payload: {errors: ['Погрешен Е-маил/Лозинка']}
 				})
 			})
+	}
+}
+
+export function datasetList(){
+	return dispatch => {
+		axios.get(`${ROOT_URL}/api/3/action/package_list`).
+		    then(response => {
+		    	dispathc({
+		    		type: DATASET_LIST,
+		    		payload: response.data.result
+		    	})
+		    })
 	}
 }
 
