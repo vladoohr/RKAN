@@ -44,8 +44,6 @@ class Signin extends Component {
             <div className="col-md-2 offset-md-5">
               <button type="submit" disabled={!valid} className="btn btn-info m-t-2">Sign in</button>
             </div>
-
-            <p><Link to="signup">Sign up</Link></p>
           </form>
         </div>
       </div>

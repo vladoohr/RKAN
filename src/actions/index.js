@@ -35,7 +35,14 @@ export function signinUser() {
 	return dispatch => {
 		axios.get(`${ROOT_URL}/api/3/action/user_show?id=tino097`, {headers: {'Authorization':'2d157972-2d68-49b6-accd-b1b5e3f48046'}})
 			.then(response => {
-				console.log(response.data);
+				dispatch({
+					type: AUTH_USER,
+					payload: response.data.result
+				})
+				localStorage.setItem('auth_token', response.data.apikey)				
+				localStorage.setItem('user', JSON.stringify(response.data.result))				
+				browserHistory.push('/')
+
 			})
 			.catch(error => {
 				dispatch({

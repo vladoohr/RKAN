@@ -16,15 +16,6 @@ import reducers from './reducers'
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers)
 
-const auth_token = localStorage.getItem('auth_token')
-const user = localStorage.getItem('user')
-if (auth_token) {
-	store.dispatch({
-		type: AUTH_USER,
-		payload: {user: JSON.parse(user)}
-	})
-}
-
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory} routes={routes} />

@@ -25,6 +25,26 @@ class Header extends Component {
 		const { collapsed } = this.state
 		const collapseClass = this.state.collapsed ? 'collapse' : ''
 		const pullNav = this.state.collapsed ? 'pull-xs-right' : 'pull-xs-left'
+
+		const renderMenuItems = () => {
+			if (authenticated) {
+				return(
+					<ul className={"nav navbar-nav " + pullNav}>
+		        		<li className="nav-item">
+			    			<Link to="signin" className={"nav-link " + signinActive}>Hello, {this.props.user.name}</Link>
+				    	</li>
+		        	</ul>
+				)
+			}
+
+			return(
+		        <ul className={"nav navbar-nav " + pullNav}>
+		        	<li className="nav-item">
+			    		<Link to="signin" className={"nav-link " + signinActive}>Sign in</Link>
+				    </li>
+		        </ul>
+			)
+		}
 	
 		return(
 			<div>
@@ -36,14 +56,10 @@ class Header extends Component {
 
 		  			<div className={ "navbar-toggleable-xs " + collapseClass}>
 			  			<a className="navbar-brand" href="/">
-							  <em>RKAN</em>
-							</a>
-			        <ul className={"nav navbar-nav " + pullNav}>
-			        	<li className="nav-item">
-				    		<Link to="signin" className={"nav-link " + signinActive}>Sign in</Link>
-					    </li>
-			        </ul>
+						    <em>RKAN</em>
+						</a>
 			      </div>
+			      { renderMenuItems() }
 			    </div>
 				</nav>
 			</div>
